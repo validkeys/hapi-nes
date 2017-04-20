@@ -1,0 +1,13 @@
+<h1>Team 1's Chat Room</h1>
+
+<ul>
+  {{#each model as |message|}}
+    <li>{{message.text}}</li>
+  {{/each}}
+</ul>
+
+<form {{action "newMessage" on="submit"}}>
+  {{input type="text" value=newMessage placeholder="Type your new message"}}
+</form>
+
+{{outlet}}
